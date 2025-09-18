@@ -1,25 +1,25 @@
 p.d{
-    color: rgb(248, 197, 218);}
+    color: rgb(248, 197, 218);font-family: "e";}
     p.e{
-        color: rgb(248, 197, 227);
+        color: rgb(248, 197, 227);font-family: "e"
     }
     p.f{
-        color: rgb(248, 197, 244);
+        color: rgb(248, 197, 244);font-family: "e"
     }
     p.g{
-        color: rgb(248, 197, 244);
+        color: rgb(248, 197, 244);font-family: "e"
     }
     p.h{
-        color: rgb(248, 197, 244);
+        color: rgb(248, 197, 244);font-family: "e"
     }
     p.i{
-        color: rgb(248, 197, 244);
+        color: rgb(248, 197, 244);font-family: "e"
     }
     p.k{
-        color: rgb(248, 197, 244);
+        color: rgb(248, 197, 244);font-family: "e"
     }
     p.l{
-        color: rgb(248, 197, 244);
+        color: rgb(248, 197, 244);font-family: "e"
     }
 body {background-image:
     url("www.gif");padding: 40px;
@@ -36,7 +36,7 @@ body {background-image:
                src: url("Autumn better.otf"); }
             
                @font-face {
-                font-family: "d";
+                font-family: "e";
                 src: url("Cartoon Design.otf"); }
  
             h2{text-align: center;font-family: "c";color: lightpink;font-size: 45px;
