@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kartu Fakta Menarik — Budaya</title>
+  <link rel="stylesheet" href="kartuinformasi.css">
+  <style>
+  
+  .facts-list{
+      width: 1000px;height: 200px;;background-color: rgb(255, 208, 208);margin: auto;;border-radius: 30px;}
+  </style>
+</head>
+<body >
+
+
+  <div class="card-fakta">
+    <img class="z" id="factImage" src="jepang.jpg" alt="Ilustrasi Negara Jepang" />
+    <div class="content">
+      <h2>Fakta Menarik tentang Budaya Negara</h2>
+      <p class="subtitle">Tahukah kamu fakta-fakta unik ini?</p>
+
+      <ul class="facts-list" id="factList">
+        <li class="a">Budaya pop Jepang seperti anime, manga, dan video game telah mendunia dan menjadi daya tarik internasional. </li>
+        
+        <li class="b">Masyarakat Jepang sangat menjunjung tinggi sopan santun, kesopanan, dan penghormatan terhadap orang tua atau senior. 
+            Konsep "Omotenashi" (keramahan tanpa pamrih) sangat penting dalam dunia pelayanan. </li>
+       
+            <li class="c">tradisi Hanami adalah tradisi Jepang untuk menikmati keindahan bunga sakura yang sedang bermekaran.  </li>
+       
+            <li class="d">Ada budaya rasa syukur yang mendalam terhadap makanan, seperti mengucapkan "Itadakimasu" sebelum makan. 
+        </li>
+      </ul>
+
+
+      <button class="btn-next" id="nextFact">🔁 Fakta Selanjutnya</button>
+
+
+      <div class="card-footer"></div>
+    </div>
+  </div>
+
+
+  <script>
+    const factData = [
+      {
+        image: "eku.jpg",
+        facts :[
+          "Pada malam Tahun Baru, orang Ekuador membakar boneka jerami yang disebut Año Viejo ,untuk mengusir nasib buruk dan menyambut keberuntungan di tahun mendatang. ",
+          
+          
+          " Pada tanggal 2 November, masyarakat mengunjungi makam orang terkasih untuk mendoakan dan meninggalkan makanan favorit mereka sebagai persembahan ,Dia de los Difuntos (Hari Arwah) . ",
+          
+
+          "Ekuador tidak memiliki mata uang sendiri dan menggunakan Dolar Amerika Serikat sebagai alat pembayaran resmi karena krisis moneter di masa lalu."
+         
+        ]
+      },
+      {
+        image: "chi.jpg",
+        facts: [
+         
+          "Penggunaan sumpit sebagai alat makan utama, warna putih untuk berkabung.",
+          "Tradisi makan bersama dengan sumpit bertujuan untuk mempererat tali persaudaraan karena dianggap lebih aman dibandingkan alat makan tajam",
+          "China menggunakan pakaian berwarna putih yang disebut Hoo Lam sebagai warna duka. "
+        ]
+      },
+      {
+        image: "arg.jpg",
+        facts: [
+          "Setiap tanggal 29 setiap bulan, masyarakatnya memiliki tradisi makan gnocchi (sejenis pasta) untuk mendapatkan keberuntungan dan rezeki di bulan berikutnya. .",
+          "Konsumsi daging sapi yang sangat tinggi merupakan kebanggaan nasional Argentina dan bagian dari identitas budaya mereka.",
+          "Lebih dari sekadar olahraga, sepak bola adalah bagian integral dari budaya Argentina yang menyatukan semua lapisan masyarakat. ."
+        ]
+      },
+      {
+        image: "isl.jpg",
+        facts: [
+          "Tradisi Jolabokaflod (Festival Buku Natal) adalah kebiasaan memberi buku sebagai hadiah dan menghabiskan malam Natal dengan membaca sambil minum cokelat panas. .",
+          "Islandia memiliki jumlah penulis dan pembaca buku per kapita yang sangat tinggi. Sebagian dari mereka, seperti Halldór Laxness (penerima Nobel Sastra).",
+          " Budaya Islandia sangat terpengaruh oleh warisan Viking. Bahasa Islandia modern masih sangat mirip dengan bahasa Norse Kuno yang dituturkan oleh para pemukim Viking. ."
+        ]
+      }
+    ];
+
+
+    const factList = document.getElementById("factList");
+    const factImage = document.getElementById("factImage");
+    const nextBtn = document.getElementById("nextFact");
+
+
+    nextBtn.addEventListener("click", () => {
+      factList.classList.add("fade-out");
+      setTimeout(() => {
+        const randomFact = factData[Math.floor(Math.random() * factData.length)];
+        factImage.style.opacity = 0;
+
+
+        setTimeout(() => {
+          factImage.src = randomFact.image;
+          factImage.style.opacity = 1;
+        }, 400);
+
+
+        factList.innerHTML = randomFact.facts.map(f => `<li>${f}</li>`).join("");
+        factList.classList.remove("fade-out");
+      }, 500);
+    });
+  </script>
+
+
+</body>
+</html>
+
+
